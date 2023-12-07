@@ -25,4 +25,4 @@ urlpatterns = [
 ]
 
 
-app_name = "pyTodoList"
+app_name = "py_todo_list"

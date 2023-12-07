@@ -8,53 +8,53 @@ from .models import Task, Tag
 
 class Index(generic.ListView):
     model = Task
-    template_name = "pyTodoList/index.html"
+    template_name = "py_todo_list/index.html"
 
 
 
 class TaskCreateView(generic.CreateView):
     model = Task
     form_class = TaskForm
-    template_name = "pyTodoList/task_form.html"
+    template_name = "py_todo_list/task_form.html"
     success_url = reverse_lazy("pyTodoList:index")
 
 
 class TaskUpdateView(generic.UpdateView):
     model = Task
     form_class = TaskForm
-    template_name = "pyTodoList/task_form.html"
+    template_name = "py_todo_list/task_form.html"
     success_url = reverse_lazy("pyTodoList:index")
 
 
 class TaskDeleteView(generic.DeleteView):
     model = Task
-    template_name = "pyTodoList/task_delete.html"
+    template_name = "py_todo_list/task_delete.html"
     success_url = reverse_lazy("pyTodoList:index")
 
 
 class TagListView(generic.ListView):
     model = Tag
-    template_name = "pyTodoList/tag_list.html"
+    template_name = "py_todo_list/tag_list.html"
 
 
 
 class TagCreateView(generic.CreateView):
     model = Tag
     fields = "__all__"
-    template_name = "pyTodoList/tag_form.html"
+    template_name = "py_todo_list/tag_form.html"
     success_url = reverse_lazy("pyTodoList:tag-list")
 
 
 class TagUpdateView(generic.UpdateView):
     model = Tag
     fields = "__all__"
-    template_name = "pyTodoList/tag_form.html"
+    template_name = "py_todo_list/tag_form.html"
     success_url = reverse_lazy("pyTodoList:tag-list")
 
 
 class TagDeleteView(generic.DeleteView):
     model = Tag
-    template_name = "pyTodoList/tag_delete.html"
+    template_name = "py_todo_list/tag_delete.html"
     success_url = reverse_lazy("pyTodoList:tag-list")
 
 
